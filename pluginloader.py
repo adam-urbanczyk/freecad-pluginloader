@@ -26,7 +26,9 @@ from datetime import datetime
 from os.path import expanduser
 
 home = expanduser("~")
-__dir__=home+ '/.FreeCAD/Mod/pluginloader'
+__dir__=home+ '/.FreeCAD/Mod/pluginloader' #FIXME I should use this type of construction here: filename = inspect.getframeinfo(inspect.currentframe()).filename
+					   #path = os.path.dirname(os.path.abspath(filename))
+					   #BTW __dir__ is hardcoded and overwritten at the moment
 __dir__=FreeCAD.ConfigGet('AppHomePath')+"/Mod/plugins"
 
 
